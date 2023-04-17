@@ -39,6 +39,20 @@ public class MergeSort {
             }
             j++;
         }
+        // adding any remaining elements of the first half in b
+        while (i1 <= mid) {
+            b[j] = a[i1];
+            i1++;
+            j++;
+        }
+
+        // ading any remaining elements of the second half in b
+        while (i2 <= to) {
+            b[j] = a[i2];
+            i2++;
+            j++;
+        }
+
         // copy back from the temporary array b
         for (j = 0; j < n; j++) {
             a[from + j] = b[j];
