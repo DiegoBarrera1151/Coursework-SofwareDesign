@@ -39,7 +39,10 @@ public class MergeSort {
             }
             j++;
         }
-
-
+        // copy back from the temporary array b
+        for (j = 0; j < n; j++) {
+            a[from + j] = b[j];
+        }
+    }//end merge part
     
 }
