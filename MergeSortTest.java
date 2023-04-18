@@ -1,16 +1,17 @@
 import org.junit.Test;
-import java.util.ArrayList;
+import static org.junit.Assert.*;
+
 import java.util.Arrays;
-import java.util.List;
-import static org.junit.Assert.assertEquals;
 
 public class MergeSortTest {
 
     @Test
-    public void testSort() {
-        List<String> dwarfs = new ArrayList<>(Arrays.asList("Dopey", "Doc", "Sleepy", "Happy", "Bashful", "Sneezy", "Grumpy"));
-        List<String> expected = new ArrayList<>(Arrays.asList("Bashful", "Doc", "Dopey", "Grumpy", "Happy", "Sleepy", "Sneezy"));
-        List<String> actual = MergeSort.sort(dwarfs);
-        assertEquals(expected, actual);
+    public void testMergeSort() {
+        String[] expected = {"Bashful", "Doc", "Dopey", "Grumpy", "Happy", "Sleepy", "Sneezy"};
+        String[] input = {"Dopey", "Doc", "Sleepy", "Happy", "Bashful", "Sneezy", "Grumpy"};
+
+        MergeSort.mergeSort(input, 0, input.length - 1);
+
+        assertArrayEquals(expected, input);
     }
 }
