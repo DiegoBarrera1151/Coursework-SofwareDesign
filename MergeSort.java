@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class MergeSort {
 
     public static void main(String[] args) {
-        String[] values = {"hello", "zoo", "airplain", "bakery", "clean", "daisy","oliver","bear","airport","salmon","fish"};
+        String[] values = {"Dopey", "Doc", "Sleepy", "Happy", "Bashful", "Sneezy", "Grumpy"};
         mergeSort(values, 0, values.length - 1);
         System.out.println("Result " + Arrays.toString(values));
     }
